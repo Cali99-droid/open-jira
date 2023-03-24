@@ -21,7 +21,7 @@ import { UIState } from './UIProvider';
            case 'UI - Set isAddingEntry':
                 return{
                         ...state,
-                        isAddingEntry:true,
+                        isAddingEntry:action.payload,
                         }       
            case 'UI - Start Dragging':
                    return{

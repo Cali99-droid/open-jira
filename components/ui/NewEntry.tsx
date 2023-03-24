@@ -9,11 +9,6 @@ const NewEntry = () => {
 
     const {addNewEntry}= useContext(EntriesContext);
     const {isAddingEntry, setIsAddEntry}=useContext(UIContext);
-
-
-
-    
-
     const [inputValue, setInputValue] = useState('')
     const [touched, setTouched] = useState(false)
 
@@ -21,7 +16,6 @@ const NewEntry = () => {
         setInputValue(event.target.value);
 
     }
-
     const onSave = ()=>{
        if(inputValue.length ===0) return;
        addNewEntry(inputValue);
