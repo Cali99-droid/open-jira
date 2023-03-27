@@ -29,7 +29,7 @@ const {startDagging,endDagging} = useContext(UIContext)
     >
         <CardActionArea>
             <CardContent>
-                <Typography sx={{whiteSpace:'pre-line'}}>{entry.descripcion}</Typography>
+                <Typography sx={{whiteSpace:'pre-line'}}>{entry.description}</Typography>
             </CardContent>
             <CardActions sx={{display:'flex',justifyContent:'end', paddingRight:'2'}}> 
                 <Typography variant='body2'>

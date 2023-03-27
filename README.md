@@ -13,3 +13,15 @@ docker-compose up -d
 ```
 mongodb://localhost:27017/entriesdb
 ```
+
+## Configurar variables de netrono
+
+Renombrar el archivo **.env.template** a **.env**
+
+## Llenar la base datos con informacion de pruebas
+
+llamar a:
+
+```
+http://localhost:3000/api/seed
+```

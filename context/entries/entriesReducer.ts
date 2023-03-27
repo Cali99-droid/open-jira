@@ -5,6 +5,7 @@ import { Entry } from '../../interfaces/entry';
    type EntriesType = 
    |{type:'[Entry] Add-Entry', payload:Entry}
    |{type:'[Entry] Entry-UPDATED', payload:Entry}
+   |{type:'[Entry] REFRESH-Data', payload:Entry[]}
    
     export const entriesReducer =(state:EntriesState,action:EntriesType):EntriesState=>{
 
@@ -20,13 +21,18 @@ import { Entry } from '../../interfaces/entry';
                     entries:[...state.entries.map(entry=>{
                         if(entry._id === action.payload._id){
                             entry.status = action.payload.status;
-                            entry.descripcion = action.payload.descripcion
+                            entry.description = action.payload.description
                             
                         }
                         return entry;
 
                     })]
-                    }             
+                    }  
+            case '[Entry] REFRESH-Data':
+                return{
+                    ...state,
+                    entries: [...action.payload]
+                }          
            default:
                    return state;
        }    
